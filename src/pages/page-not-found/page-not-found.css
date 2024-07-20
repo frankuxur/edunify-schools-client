@@ -1,0 +1,35 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found > .icon {
+    font-size: var(--font-xxl);
+    margin-bottom: var(--xl);
+}
+
+.not-found h1 {
+    font-weight: var(--bold);
+    font-size: var(--font-xxl);
+    margin-bottom: var(--m);
+}
+
+.not-found button {
+    background-color: var(--crownberry-blue);
+    width: 100%;
+    padding: var(--s);
+    border-radius: var(--xs);
+    color: var(--snow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--xxs);
+    transition: 0.2s;
+}
+
+
+.not-found button:hover {
+    filter: brightness(1.4);
+}

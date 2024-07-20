@@ -1,0 +1,156 @@
+.show {
+    width: 76rem;
+    padding: var(--l);
+}
+
+.show__header {
+    border-bottom: 0.01rem solid var(--text-3);
+    padding-bottom: var(--s);
+    margin-bottom: var(--l);
+    position: relative;
+    display: flex;
+    gap: var(--xl);
+}
+
+.show__title {
+    font-size: var(--font-xxl);
+    font-weight: var(--bolder);
+}
+
+.show__subtitle {
+    font-size: var(--font-m);
+    color: var(--text-2);
+}
+
+.schools__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--xxxl) var(--xl);
+}
+
+.school {
+    padding: var(--xs);
+    padding-bottom: var(--xl);
+    box-shadow: 0 0 0.6rem 0.07rem rgba(0 0 0 / 0.04);
+    border-radius: var(--l);
+    border: 0.01rem solid transparent;
+    border-right-color: var(--text-3);
+    border-bottom-color: var(--text-3);
+    background-color: var(--snow);
+    transition: 0.4s;
+}
+
+.school:hover {
+    transform: translateY(-1%);
+}
+
+.school__image {
+    border-radius: var(--s);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: var(--xxxs);
+}
+
+.school__info {
+    display: grid;
+    gap: var(--xs);
+}
+
+.school__name {
+    font-size: var(--font-l);
+    font-weight: var(--bold);
+    line-height: 1.1;
+}
+
+.school__location {
+    display: flex;
+    gap: var(--xxxs);
+}
+
+.school__city {
+    margin-right: var(--xxxs);
+}
+
+.show__button {
+    background-color: var(--crownberry-blue);
+    padding: var(--s);
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--xs);
+    color: var(--snow);
+    font-size: var(--font-m);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--xs);
+    transition: 0.2s;
+    font-weight: var(--semi-bold);
+}
+
+.show__button:hover,
+.show__button:focus {
+    filter: brightness(1.4);
+    box-shadow: 0 0 0.1rem 0.02rem rgba(0 0 0 / 0.1);
+}
+
+.schools__empty {
+    min-height: 80vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schools__empty button {
+    background-color: var(--crownberry-blue);
+    padding: var(--s);
+    border-radius: var(--xs);
+    color: var(--snow);
+    font-size: var(--font-m);
+    margin-top: var(--xs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.schools__empty button:hover {
+    filter: brightness(1.4);
+}
+
+.schools__empty div {
+    font-weight: var(--semi-bold);
+}
+
+
+
+/* media query */
+@media (max-width: 480px) {
+    .show {
+        width: 100%;
+        padding: var(--s) var(--xxs);
+    }
+    
+    .show__title {
+        font-size: var(--font-xl);
+        font-weight: var(--bolder);
+    }
+    
+    .show__subtitle {
+        font-size: var(--font-s);
+        color: var(--text-2);
+    }
+    
+    .show__button {
+        margin-top: 0;
+    }
+}
+
+@media (max-width:  320px) {
+    .schools__list {
+        grid-template-columns: 1fr;
+    }
+} 
